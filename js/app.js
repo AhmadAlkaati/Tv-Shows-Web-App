@@ -4,7 +4,7 @@ function main() {
   const searchInput = document.querySelector('.search input');
 
   function fetchShows() {
-    fetch('http://api.tvmaze.com/shows')
+    fetch('https://api.tvmaze.com/shows')
       .then((shows) => {
         return shows.json();
       })
