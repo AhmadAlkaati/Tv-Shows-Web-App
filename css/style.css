@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #050505;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track-piece {
+  background: #333232;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bb1a1a;
+  border-radius: 10px;
+  height: 10px;
+}
+
+main {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+main header h1 {
+  letter-spacing: 5px;
+  font-size: 40px;
+  color: #bb1a1a;
+  text-shadow: #af1919 3px 3px 10px;
+}
+
+main .search {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+main .search input {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid #bb1a1a;
+}
+
+main .shows {
+  display: grid;
+  grid-template-columns: repeat(5, 250px);
+  justify-content: center;
+  column-gap: 3rem;
+  row-gap: 1.5rem;
+  margin-top: 3rem;
+  background: #1b1b1b;
+  padding: 1.5rem 0;
+  box-shadow: 1px 1px 10px 15px #bb1a1a;
+}
+
+main .shows .show {
+  position: relative;
+  height: 421px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .shows .show .show-cover {
+  width: 250px;
+}
+
+main .shows .show .show-info {
+  background: #272525;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: relative;
+  color: white;
+}
+
+main .shows .show .show-info .show-date {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+main .shows .show .show-info .show-rating {
+  height: 25px;
+  color: #bb1a1a;
+}
+
+main .shows .show .show-summary {
+  background: #202020;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  color: white;
+  transform: translateY(100%);
+  overflow-y: scroll;
+}
+
+main .shows .show .show-summary h3 {
+  margin-bottom: 0.7rem;
+}
+
+main .shows .show:hover .show-summary {
+  transform: translateY(0);
+  transition: transform 0.5s ease-in;
+}
+
+main .pagination {
+  width: 100%;
+  height: 30px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+main .pagination a {
+  margin: 0 0.4rem;
+  color: #af1919;
+}
+
+main .social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main .social a {
+  color: #af1919;
+}
+
+main .social a i {
+  margin: 0 0.4rem;
+}
+/*# sourceMappingURL=style.css.map */

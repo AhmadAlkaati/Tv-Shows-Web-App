@@ -1,0 +1,135 @@
+@import 'utilities';
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track-piece {
+  background: #333232;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(187, 26, 26);
+  border-radius: 10px;
+  height: 10px;
+}
+main {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    h1 {
+      letter-spacing: 5px;
+      font-size: 40px;
+      color: rgb(187, 26, 26);
+      text-shadow: rgb(175, 25, 25) 3px 3px 10px;
+    }
+  }
+  .search {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+
+    input {
+      padding: 1rem;
+      border-radius: 10px;
+      border: 2px solid rgb(187, 26, 26);
+    }
+  }
+  .shows {
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    justify-content: center;
+    column-gap: 3rem;
+    row-gap: 1.5rem;
+    margin-top: 3rem;
+    background: rgb(27, 27, 27);
+    padding: 1.5rem 0;
+    box-shadow: 1px 1px 10px 15px rgb(187, 26, 26);
+    .show {
+      position: relative;
+      height: 421px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .show-cover {
+        width: 250px;
+      }
+      .show-info {
+        background: rgb(39, 37, 37);
+        height: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        padding: 0.5rem;
+        position: relative;
+        color: white;
+        .show-date {
+          position: absolute;
+          bottom: 0.5rem;
+          right: 0.5rem;
+        }
+        .show-rating {
+          //   background: rgb(187, 26, 26);
+          height: 25px;
+          color: rgb(187, 26, 26);
+        }
+      }
+      .show-summary {
+        background: rgb(32, 32, 32);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        position: absolute;
+        color: white;
+
+        transform: translateY(100%);
+        overflow-y: scroll;
+
+        h3 {
+          margin-bottom: 0.7rem;
+        }
+      }
+      &:hover .show-summary {
+        transform: translateY(0);
+        transition: transform 0.5s ease-in;
+      }
+    }
+  }
+  .pagination {
+    width: 100%;
+    height: 30px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    a {
+      margin: 0 0.4rem;
+      color: rgb(175, 25, 25);
+    }
+  }
+  .social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    a {
+      color: rgb(175, 25, 25);
+      i {
+        margin: 0 0.4rem;
+      }
+    }
+  }
+}
