@@ -5,7 +5,7 @@ document.write(`      <main>
 </section>
 <section class="shows"></section>
 <section class="pagination">
-  <a href="/index.html">1</a><a href="../page2/page2.html">2</a
+  <a href="../index.html">1</a><a href="../page2/page2.html">2</a
   ><a href="../page3/page3.html">3</a><a href="../page4/page4.html">4</a
   ><a href="../page5/page5.html">5</a>
 </section>
